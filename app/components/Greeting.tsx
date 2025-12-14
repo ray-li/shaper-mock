@@ -1,3 +1,5 @@
+import { Box, Typography } from "@mui/material";
+
 type GreetingProps = {
     name: string;
     age: number;
@@ -10,12 +12,12 @@ function Greeting({ name, age }: GreetingProps) {
     const advancedAge = age + 24;
     
     return (
-        <>
-            <h1>What's up {name}?</h1>
-            <h2>{shoutName}</h2>
-            <p>Your age is {age}. Your advanced age is {advancedAge}</p>
-            <p>How cool is that?</p>
-        </>
+        <Box>
+            <Typography variant="h1">What's up {name}?</Typography>
+            <Typography variant="h2">{shoutName}</Typography>
+            <Typography variant="body1">Your age is {age}. Your advanced age is {advancedAge}</Typography>
+            <Typography variant="body1">How cool is that?</Typography>
+        </Box>
     );
 }
 
