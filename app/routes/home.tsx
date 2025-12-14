@@ -16,12 +16,9 @@ export default function Home() {
   return (
     <>
       <Carousel /> {/* Carousel converts to jsx(Carousel, {}) */}
-      <Greeting name="Joanna" age={10} />
-      <Welcome />
     </>
   );
 }
-
 
 // Home() transforms to:
 /**
