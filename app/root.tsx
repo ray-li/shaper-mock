@@ -9,6 +9,8 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,6 +25,10 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+// React Router looks for a component named Layout by convention.
+// This is the outermost wrapper.
+// If there are no errors, Layout will render with App as its child.
+// If there are errors, Layout will render with ErrorBoundary as its child.
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -42,7 +48,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  // Outlet reneders page content.
+  // React Router maintains routing state and uses that to render the contents of Outlet.
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
