@@ -1,4 +1,4 @@
-import type { Route } from "./+types/home";
+import type { Route } from "./+types/_index";
 import { Welcome } from "../components/welcome/welcome";
 import Greeting from "~/components/Greeting";
 import Carousel from "~/components/Carousel";
