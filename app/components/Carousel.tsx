@@ -14,12 +14,13 @@ function Carousel() {
         <Box>
             <Box>
                 <Box>
-                    <Box sx={{ color: currentSlide == 1 ? "black" : "white" }}>
-                        I'm Box 1!
-                    </Box>
-                    <Box sx={{ color: currentSlide == 2 ? "black" : "white" }}>
-                        I'm Box 2!
-                    </Box>
+                    {slides.map((slide) => (
+                        <Box 
+                            sx={{color: currentSlide === slide.id ?"black" : "white"}}
+                        >
+                            {slide.id}
+                        </Box>
+                    ))}
                 </Box>
             </Box>
             <Box> {currentSlide} </Box>
