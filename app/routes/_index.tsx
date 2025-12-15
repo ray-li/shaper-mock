@@ -2,6 +2,7 @@ import type { Route } from "./+types/_index";
 import { Welcome } from "../components/welcome/welcome";
 import Greeting from "~/components/Greeting";
 import Carousel from "~/components/Carousel";
+import UserList from "~/components/UserList";
 
 // Defines the meta tags for the page's head
 // React Router will look for this by naming convention
@@ -15,6 +16,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <>
+      <UserList />
       <Carousel /> {/* Carousel converts to jsx(Carousel, {}) */}
     </>
   );
