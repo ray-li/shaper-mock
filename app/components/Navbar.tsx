@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Link, Stack } from "@mui/material";
 
 function Navbar() {
     return (
@@ -9,7 +9,7 @@ function Navbar() {
             justifyContent="center" // horizontal alignment
             alignItems="center"
         >
-            <Box>Products</Box>
+            <Link href="/store">Products</Link>
             <Box>Studio</Box>
             <Box>ShaperHub</Box>
             <Box>Applications</Box>

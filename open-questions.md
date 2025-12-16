@@ -1,0 +1,2 @@
+- How does React Router bind route changes to Outlet? (In other words, how do page changes actually occur?)
+    - Does React intercept relative path URL changes?
