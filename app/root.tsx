@@ -11,6 +11,8 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -51,11 +53,11 @@ export default function App() {
   // Outlet reneders page content.
   // React Router maintains routing state and uses that to render the contents of Outlet.
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Navbar />
       <Outlet />
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }
 

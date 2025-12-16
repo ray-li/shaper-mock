@@ -1,1 +1,2 @@
 - With React Router SSR, useEffect does NOT run on the server.
+- When using the map(), element must have a key. This is a requirement.
